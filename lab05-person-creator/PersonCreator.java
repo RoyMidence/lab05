@@ -109,11 +109,11 @@ public class PersonCreator
 
    // get users DOB
     public void DOB(int month, int day, int year) {
-      if ((1 <= month) && ( month <= 12) {
+      if ((1 <= month) && ( month <= 12)) {
         this.month = month;
       }
 
-      if ((1 <= day) ( day <= 31)) {
+      if ((1 <= day) && ( day <= 31)) {
         this.day = day;
       }
 
