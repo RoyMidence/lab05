@@ -67,7 +67,7 @@ public class PersonCreator
 
     //added this to quickly check numbers so dont have to repetitively type
     private int numberCheck(int num) {
-      if ( 100<= num <= 999) {
+      if ( (100<= num) && ( num <= 999)) {
         return num;
       }  else if (num < 100) {
       System.exit(0);
@@ -78,7 +78,7 @@ public class PersonCreator
     public void phoneNumber(int p1, int p2, int p3) {
       this.p1 = numberCheck(p1);
       this.p2 = numberCheck(p2);
-      if ( 1000<= p3 <= 9999) {
+      if ( (1000<= p3) (p3 <= 9999)) {
         this.p3 = p3;
       }  else if (p3 < 1000) {
       System.exit(0);
@@ -94,13 +94,13 @@ public class PersonCreator
     public void SSN(int F, int S, int T) {
       this.SSN1 = numberCheck(F);
 
-      if ( 10<= this.SSN2 <= 99) {
+      if ( (10<= this.SSN2) && ( this.SSN2 <= 99)) {
         this.SSN2 = SSN2;
       }  else if (this.SSN2 < 10) {
       System.exit(0);
       }
 
-      if ( 1000<= this.SSN3 <= 9999) {
+      if ( (1000<= this.SSN3) && ( this.SSN3<= 9999)) {
         this.SNN3 = SSN3;
       }  else if (num < 1000) {
       System.exit(0);
@@ -109,11 +109,11 @@ public class PersonCreator
 
    // get users DOB
     public void DOB(int month, int day, int year) {
-      if (1 <= month <= 12) {
+      if ((1 <= month) && ( month <= 12) {
         this.month = month;
       }
 
-      if (1 <= day <= 31) {
+      if ((1 <= day) ( day <= 31)) {
         this.day = day;
       }
 
