@@ -78,7 +78,7 @@ public class PersonCreator
     public void phoneNumber(int p1, int p2, int p3) {
       this.p1 = numberCheck(p1);
       this.p2 = numberCheck(p2);
-      if ( (1000<= p3) (p3 <= 9999)) {
+      if ( (1000<= p3) && (p3 <= 9999)) {
         this.p3 = p3;
       }  else if (p3 < 1000) {
       System.exit(0);
