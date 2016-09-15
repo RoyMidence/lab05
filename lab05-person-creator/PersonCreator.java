@@ -1,9 +1,9 @@
-
+package labs;
 /**
  * Write a description of class PersonCreator here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Roy Midence)
+ * @version (Millionth version)
  */
 public class PersonCreator
 {
@@ -37,7 +37,7 @@ public class PersonCreator
       if (age < 0) {
         System.out.println("Youre a fetus, how am i talking to you?");
       }
-      if (0 < age < 110) {
+      if ((0 < age) && ( age < 110)) {
         System.out.println("Okay thanks for the info sucker!");
         this.age = age;
       }
@@ -72,6 +72,7 @@ public class PersonCreator
       }  else if (num < 100) {
       System.exit(0);
       }
+      return num = 0;
     }
 
     //get users phone number
@@ -101,8 +102,8 @@ public class PersonCreator
       }
 
       if ( (1000<= this.SSN3) && ( this.SSN3<= 9999)) {
-        this.SNN3 = SSN3;
-      }  else if (num < 1000) {
+        this.SSN3 = SSN3;
+      }  else if (SSN3 < 1000) {
       System.exit(0);
       }
     }
@@ -118,14 +119,14 @@ public class PersonCreator
       }
 
       if ((month == 2) && (day <= 29)) {
-        system.exit(0);
+        System.exit(0);
       }
 
       this.year = year;
     }
 
     public void Info() {
-      System.out.println("Name: " + this.NameF + " " + this.NameL);
+      System.out.println("Name: " + this.nameF + " " + this.nameL);
       System.out.println("Age: " + this.age);
       System.out.println("Sex: " + this.sex);
       System.out.println("Height: " + this.height + " inches");
