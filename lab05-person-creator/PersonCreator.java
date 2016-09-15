@@ -1,4 +1,4 @@
-package labs;
+ 
 /**
  * Write a description of class PersonCreator here.
  *
@@ -7,48 +7,72 @@ package labs;
  */
 public class PersonCreator
 {
-    private String nameF;
-    private String nameL;
-    private int age;
-    private String sex;
-    private int height;
-    private double weight;
-    private int SSN1;
-    private int SSN2;
-    private int SSN3;
-    private String address;
-    private int p1;
-    private int p2;
-    private int p3;
-    private int month;
-    private int day;
-    private int year;
+    //instance variables
 
+    private String nameF;// first name
+    private String nameL;// last name
+    private int age;// age
+    private String sex;//sex
+    private int height;//height in inches
+    private double weight;// weight in pounds
+    private int SSN1;// first 3 digits in social security
+    private int SSN2;//second 2 digits in social security
+    private int SSN3;// last 4 digits in social security
+    private String address;// address
+    private int p1;// first 3 numbers in phone number
+    private int p2;// second set of numbers
+    private int p3;// last 4 numbers in phone number
+    private int month;// month born
+    private int day;// day born
+    private int year;//  year born
+
+    
+    /*
+     * Constructs an object using the first and last name
+     * 2 strings, first name and last name
+     * outputs nothing just a constructor
+     * personCreator("Roy", "Midence");
+     */
     public PersonCreator(String nameF, String nameL) {
       this.nameF = nameF;
       this.nameL = nameL;
     }
 
-    //gets users age
+     /*
+     * Gets users age
+     * takes in 1 int, which is users age
+     * outputs nothing jus takes in age and sets instance varibale
+     * setAge(18);
+     */
     public void setAge(int age) {
       if (age>110) {
         System.out.println("You are either really old or dead and thats acceptable.");
       }
       if (age < 0) {
-        System.out.println("Youre a fetus, how am i talking to you?");
+        System.out.println("You're a fetus, how am i talking to you?");
       }
-      if ((0 < age) && ( age < 110)) {
+      if ((0 < age) || ( age < 110)) {
         System.out.println("Okay thanks for the info sucker!");
         this.age = age;
       }
     }
 
-    // get users sex
+     /*
+     * gets users perfered sex
+     * takes in a string 
+     * outputs nothing just set instance varibale
+     * setSex("Shrek");
+     */
     public void setSex(String secs) {
       this.sex = secs;
     }
 
-    //get users height in inches
+    /*
+     * gets users height
+     * takes in an int 
+     * outputs nothing just set instance varibale
+     * setHeight(72)
+     */
     public void setHeight(int height) {
       if (height > 90) {
         System.out.println("Do you play basket ball?");
@@ -60,14 +84,24 @@ public class PersonCreator
       }
     }
 
-    //get Weight
+    /*
+     * gets users weight
+     * takes in a double
+     * outputs nothing just set instance varibale
+     * weight(420.69);
+     */
     public void weight(double weight) {
       this.weight = weight;
     }
 
-    //added this to quickly check numbers so dont have to repetitively type
+    /*
+     * actually just checks to see if the correct numbers have been used
+     * takes in an int 
+     * outputs the int thats been inputed if it fits the rules
+     * numberCheck(69; outputs 69
+     */
     private int numberCheck(int num) {
-      if ( (100<= num) && ( num <= 999)) {
+      if ( (100<= num) || ( num <= 999)) {
         return num;
       }  else if (num < 100) {
       System.exit(0);
@@ -75,46 +109,66 @@ public class PersonCreator
       return num = 0;
     }
 
-    //get users phone number
+    /*
+     * gets users phone number
+     * takes in 3 ints for diffrent parts of phone number
+     * outputs nothing just set instance varibales
+     * PhoneNumber(631, 488, 7264);
+     */
     public void phoneNumber(int p1, int p2, int p3) {
       this.p1 = numberCheck(p1);
       this.p2 = numberCheck(p2);
-      if ( (1000<= p3) && (p3 <= 9999)) {
+      if ( (1000<= p3) || (p3 <= 9999)) {
         this.p3 = p3;
       }  else if (p3 < 1000) {
       System.exit(0);
       }
     }
 
-    // get address
+    /*
+     * gets users adress
+     * takes in a string 
+     * outputs nothing just set instance varibale
+     * address("Meme street")
+     */
     public void address(String address) {
       this.address = address;
     }
 
-    // get users SSN
+    /*
+     * gets users Social Security Number
+     * takes in 3 ints for diffrent parts of SSN
+     * outputs nothing just set instance varibales
+     * SSN(631, 22, 7264);
+     */
     public void SSN(int F, int S, int T) {
       this.SSN1 = numberCheck(F);
 
-      if ( (10<= this.SSN2) && ( this.SSN2 <= 99)) {
-        this.SSN2 = SSN2;
-      }  else if (this.SSN2 < 10) {
+      if ( (10<= S) || ( S <= 99)) {
+        this.SSN2 = S;
+      }  else if ((S < 10) || (S > 99)) {
       System.exit(0);
       }
 
-      if ( (1000<= this.SSN3) && ( this.SSN3<= 9999)) {
-        this.SSN3 = SSN3;
-      }  else if (SSN3 < 1000) {
+      if ( (1000<= T) || ( T<= 9999)) {
+        this.SSN3 = T;
+      }  else if ((T < 1000) || (T > 9999 )) {
       System.exit(0);
       }
     }
 
-   // get users DOB
+   /*
+     * gets users date of birth
+     * takes in 3 ints for diffrent parts of date of birth
+     * outputs nothing just set instance varibales
+     * DOB(5, 27, 1998);
+     */
     public void DOB(int month, int day, int year) {
-      if ((1 <= month) && ( month <= 12)) {
+      if ((1 <= month) || ( month <= 12)) {
         this.month = month;
       }
 
-      if ((1 <= day) && ( day <= 31)) {
+      if ((1 <= day) || ( day <= 31)) {
         this.day = day;
       }
 
@@ -125,6 +179,12 @@ public class PersonCreator
       this.year = year;
     }
 
+    /*
+     * just prints out everything
+     * takes in nothing, just prints
+     * outputs everything thats been given
+     * Info();
+     */
     public void Info() {
       System.out.println("Name: " + this.nameF + " " + this.nameL);
       System.out.println("Age: " + this.age);
