@@ -42,7 +42,7 @@ public class PersonCreator
      * Gets users age
      * takes in 1 int, which is users age
      * outputs nothing jus takes in age and sets instance varibale
-     * setAge(18);
+     * setAge(18); sets age to 18
      */
     public void setAge(int age) {
       if (age>110) {
@@ -61,7 +61,7 @@ public class PersonCreator
      * gets users perfered sex
      * takes in a string 
      * outputs nothing just set instance varibale
-     * setSex("Shrek");
+     * setSex("Shrek"); will set sex as Shrek
      */
     public void setSex(String secs) {
       this.sex = secs;
@@ -71,7 +71,7 @@ public class PersonCreator
      * gets users height
      * takes in an int 
      * outputs nothing just set instance varibale
-     * setHeight(72)
+     * setHeight(72); will set height as 72 inches
      */
     public void setHeight(int height) {
       if (height > 90) {
@@ -88,7 +88,7 @@ public class PersonCreator
      * gets users weight
      * takes in a double
      * outputs nothing just set instance varibale
-     * weight(420.69);
+     * weight(420.69); will set weight to 420.69
      */
     public void weight(double weight) {
       this.weight = weight;
@@ -98,7 +98,7 @@ public class PersonCreator
      * actually just checks to see if the correct numbers have been used
      * takes in an int 
      * outputs the int thats been inputed if it fits the rules
-     * numberCheck(69; outputs 69
+     * numberCheck(69); outputs 69
      */
     private int numberCheck(int num) {
       if ( (100<= num) || ( num <= 999)) {
@@ -113,7 +113,7 @@ public class PersonCreator
      * gets users phone number
      * takes in 3 ints for diffrent parts of phone number
      * outputs nothing just set instance varibales
-     * PhoneNumber(631, 488, 7264);
+     * PhoneNumber(631, 488, 7264); will set phone number as 631-488-7264
      */
     public void phoneNumber(int p1, int p2, int p3) {
       this.p1 = numberCheck(p1);
@@ -129,7 +129,7 @@ public class PersonCreator
      * gets users adress
      * takes in a string 
      * outputs nothing just set instance varibale
-     * address("Meme street")
+     * address("Meme street") will set adress as Meme street
      */
     public void address(String address) {
       this.address = address;
@@ -139,7 +139,7 @@ public class PersonCreator
      * gets users Social Security Number
      * takes in 3 ints for diffrent parts of SSN
      * outputs nothing just set instance varibales
-     * SSN(631, 22, 7264);
+     * SSN(631, 22, 7264) will set SSN as 631-22-7264
      */
     public void SSN(int F, int S, int T) {
       this.SSN1 = numberCheck(F);
@@ -161,7 +161,7 @@ public class PersonCreator
      * gets users date of birth
      * takes in 3 ints for diffrent parts of date of birth
      * outputs nothing just set instance varibales
-     * DOB(5, 27, 1998);
+     * DOB(5, 27, 1998); will set all variables for birth.
      */
     public void DOB(int month, int day, int year) {
       if ((1 <= month) || ( month <= 12)) {
@@ -183,7 +183,7 @@ public class PersonCreator
      * just prints out everything
      * takes in nothing, just prints
      * outputs everything thats been given
-     * Info();
+     * Info(); will print out all of this .
      */
     public void Info() {
       System.out.println("Name: " + this.nameF + " " + this.nameL);
