@@ -90,7 +90,7 @@ public class PersonCreator
      * outputs nothing just set instance varibale
      * weight(420.69); will set weight to 420.69
      */
-    public void weight(double weight) {
+    public void setWeight(double weight) {
       this.weight = weight;
     }
 
@@ -115,7 +115,7 @@ public class PersonCreator
      * outputs nothing just set instance varibales
      * PhoneNumber(631, 488, 7264); will set phone number as 631-488-7264
      */
-    public void phoneNumber(int p1, int p2, int p3) {
+    public void setPhoneNumber(int p1, int p2, int p3) {
       this.p1 = numberCheck(p1);
       this.p2 = numberCheck(p2);
       if ( (1000<= p3) || (p3 <= 9999)) {
@@ -131,7 +131,7 @@ public class PersonCreator
      * outputs nothing just set instance varibale
      * address("Meme street") will set adress as Meme street
      */
-    public void address(String address) {
+    public void setAddress(String address) {
       this.address = address;
     }
 
@@ -141,7 +141,7 @@ public class PersonCreator
      * outputs nothing just set instance varibales
      * SSN(631, 22, 7264) will set SSN as 631-22-7264
      */
-    public void SSN(int F, int S, int T) {
+    public void setSSN(int F, int S, int T) {
       this.SSN1 = numberCheck(F);
 
       if ( (10<= S) || ( S <= 99)) {
@@ -163,10 +163,11 @@ public class PersonCreator
      * outputs nothing just set instance varibales
      * DOB(5, 27, 1998); will set all variables for birth.
      */
-    public void DOB(int month, int day, int year) {
+    public void setDOB(int month, int day, int year) {
       if ((1 <= month) || ( month <= 12)) {
         this.month = month;
       }
+    
 
       if ((1 <= day) || ( day <= 31)) {
         this.day = day;
@@ -183,9 +184,9 @@ public class PersonCreator
      * just prints out everything
      * takes in nothing, just prints
      * outputs everything thats been given
-     * Info(); will print out all of this .
+     * print(); will print out all of this .
      */
-    public void Info() {
+    public void print() {
       System.out.println("Name: " + this.nameF + " " + this.nameL);
       System.out.println("Age: " + this.age);
       System.out.println("Sex: " + this.sex);
